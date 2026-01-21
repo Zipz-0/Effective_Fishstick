@@ -6,17 +6,20 @@ public class Player : MonoBehaviour
     public InputActionReference movement;
     public GameObject model;
     Rigidbody rb;
+    Animator animator;
     Vector3 Direction;
+    Vector3 vel;
     Quaternion lookRotation;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        Init();
     }
 
     void Update()
     {
         Direction = movement.action.ReadValue<Vector3>();
+        
         Look();
     }
 
@@ -25,12 +28,20 @@ public class Player : MonoBehaviour
         if(rb)
         {
             float speed = 5f;
-            Vector3 vel = new Vector3(Direction.x * speed, rb.linearVelocity.y, Direction.z * speed);
+
+            vel = Vector3.Lerp(vel, new Vector3(Direction.x * speed, rb.linearVelocity.y, Direction.z * speed), 0.265f);
 
             rb.linearVelocity = vel;
+            animator.SetFloat("Speed", vel.magnitude);
 
             model.transform.rotation = lookRotation;
         }
+    }
+
+    void Init()
+    {
+        rb = GetComponent<Rigidbody>();
+        animator = model.GetComponent<Animator>();
     }
 
     void Look()
@@ -48,7 +59,6 @@ public class Player : MonoBehaviour
             if(lookDir != Vector3.zero)
             {
                 lookRotation = Quaternion.LookRotation(lookDir);
-                
             }
 
         }

@@ -11,7 +11,7 @@ public class AIBase : MonoBehaviour
 
     void Awake()
     {
-        player = FindObjectOfType<Player>();
+       player = FindFirstObjectByType<Player>();
 
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();

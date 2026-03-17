@@ -50,12 +50,15 @@ public class RandomDoorwayManager : MonoBehaviour {
 			}
 
 			int r = Random.Range(0, 2);
+			GameObject spawned;
 
 			if (r == 0) {
-				Instantiate(wallPrefab, d.transform);
+				spawned = Instantiate(wallPrefab, d.transform);
 			} else {
-				Instantiate(doorwayPrefab, d.transform);
+				spawned = Instantiate(doorwayPrefab, d.transform);
 			}
+
+			spawned.transform.Rotate(Vector3.up * 180);
 		}
 	}
 	#endregion

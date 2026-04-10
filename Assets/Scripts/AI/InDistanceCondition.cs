@@ -19,6 +19,8 @@ public partial class InDistanceCondition : Condition
             return false;
         }
 
+        Debug.Log("Checking distance condition");
+
         float currentDistance = Vector3.Distance(Enemy.Value.transform.position, Player.Value.position);
 
         return Enemy.Value.stats.attackRange > currentDistance;

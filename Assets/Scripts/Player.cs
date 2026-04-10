@@ -1,3 +1,4 @@
+using System.Data.Common;
 using Mono.Cecil;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -43,13 +44,14 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         attack.action.started += Fire;
+
     }
 
     private void OnDisable()
     {
         attack.action.started -= Fire;
+        
     }
-
     void Init()
     {
         rb = GetComponent<Rigidbody>();

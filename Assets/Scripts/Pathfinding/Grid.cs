@@ -32,15 +32,15 @@ public class Grid : MonoBehaviour
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.forward * (y * nodeDiameter + nodeRadius);
                 bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
 
-                grid[x,y] = new Node(walkable, worldPoint);
+                // grid[x,y] = new Node(walkable, worldPoint);
             }
         }
     }
 
-    public List<Node> GetNeighbors(Node node)
-    {
+    // public List<Node> GetNeighbors(Node node)
+    // {
         
-    }
+    // }
 
     public Node NodeFromWorldPoint(Vector3 worldPosition)
     {

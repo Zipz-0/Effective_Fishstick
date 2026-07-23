@@ -17,7 +17,7 @@ namespace game.Stats
         public readonly ReadOnlyCollection<StatModifier> Modifiers;
 
 
-        public List<Resource> observers;
+        private List<Resource> observers;
 
 
         public Stat()

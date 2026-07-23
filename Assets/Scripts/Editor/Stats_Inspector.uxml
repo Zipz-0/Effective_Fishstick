@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label text="Custom Stat Inspector!"/>
+    <ui:TextField label="Text Field" placeholder-text="filler text"/>
+</ui:UXML>

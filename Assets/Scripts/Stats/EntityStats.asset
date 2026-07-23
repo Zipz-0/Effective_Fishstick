@@ -10,21 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de46dc9e749d9574b83ab23395478725, type: 3}
-  m_Name: Cubey
-  m_EditorClassIdentifier: Assembly-CSharp::Stats
-  health:
-    BaseValue: 10
-  speed:
-    BaseValue: 3
-  damage:
-    BaseValue: 3
-  attackRange:
-    BaseValue: 5
-  attackCooldown:
-    BaseValue: 2
-  channelDelay:
-    BaseValue: 5
-  channelChance:
-    BaseValue: 80
-  channelTime:
-  - BaseValue: 3
+  m_Name: EntityStats
+  m_EditorClassIdentifier: Assembly-CSharp::EntityStats

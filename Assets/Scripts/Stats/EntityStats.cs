@@ -1,7 +1,7 @@
 using UnityEngine;
 using game.Stats;
 
-[CreateAssetMenu(fileName = "EntityStats", menuName = "Scriptable Objects/Stats")]
+[CreateAssetMenu(fileName = "EntityStats", menuName = "Scriptable Objects/EntityStats")]
 public class EntityStats : ScriptableObject
 {
     /*
@@ -21,12 +21,10 @@ public class EntityStats : ScriptableObject
     if we just need one off calculations just use the Stat.Value
 
     */
+    public Stat health, speed, damage, attackRange, attackCooldown, channelDelay;
     [Range(0,100)] public Stat channelChance;
     [SerializeField] public Stat[] channelTime;
     // [HideInInspector]public float currentHealth, attackCooldownTimer;
-
-
-
-    public Stat health, speed, damage, attackRange, attackCooldown, channelDelay;
+    // ---> these should be Resources
 }
 

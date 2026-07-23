@@ -70,7 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AIBase
   rb: {fileID: 0}
   body: {fileID: 0}
-  stats: {fileID: 0}
+  stats: {fileID: 11400000, guid: 10131def3d3a11d41bcc59e1df014b6f, type: 2}
+  health: {fileID: 0}
 --- !u!1 &5192137070480547877
 GameObject:
   m_ObjectHideFlags: 0

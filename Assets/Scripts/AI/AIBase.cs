@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using game.Stats;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,7 +17,8 @@ public class AIBase : MonoBehaviour
     Animator anim;
     Vector3 velocity;
     public GameObject body;
-    public Stats stats;
+    public EntityStats stats;
+    public Resource health;
     
     bool canChase = true, canAttack = true, canChannel = true;
 
@@ -32,6 +34,8 @@ public class AIBase : MonoBehaviour
         agent.speed = stats.speed;
         agent.updatePosition = false;
 
+        health = new Resource(0, stats.health, stats.health);
+        stats.health.AddObserver(health);
     }
 
     void Update()

@@ -1,9 +1,8 @@
 using UnityEngine;
 using game.Stats;
 
-// Replace the old Stats.cs with this when it works...
-[CreateAssetMenu(fileName = "NewStats", menuName = "Scriptable Objects/NewStats")]
-public class NewStats : ScriptableObject
+[CreateAssetMenu(fileName = "EntityStats", menuName = "Scriptable Objects/Stats")]
+public class EntityStats : ScriptableObject
 {
     /*
     we should distinguish between a Stat and its modifiers, and a "Resource"
@@ -28,5 +27,6 @@ public class NewStats : ScriptableObject
 
 
 
-    public Stat healthStat, speedStat, damageStat, attackRangeStat, attackCooldownStat, channelDelayStat;
+    public Stat health, speed, damage, attackRange, attackCooldown, channelDelay;
 }
+

@@ -39,7 +39,10 @@ namespace game.Stats
                     _value = CalculateFinalValue();
                     isDirty = false;
                 }
-            return _value; } }
+            return _value; }
+        }
+
+        public static implicit operator float(Stat a) { return a.Value; } // lets see if this bites us in the ass later
 
         public virtual void AddModifier(StatModifier mod)
         {
